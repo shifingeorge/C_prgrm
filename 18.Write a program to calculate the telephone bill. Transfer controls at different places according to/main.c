@@ -1,1 +1,34 @@
-[{"name":"main.c","content":"#include <stdio.h>\n\nint main()\n{\n    int ncl;\n    float rt;\n\n    printf(\"Enter number of calls :\\n\");\n    scanf(\"%d\", &ncl);\n\n    if (ncl <= 100)\n    \n    {\n        rt = 0;\n    }\n    \n    else if (ncl > 99 && ncl < 200)\n    \n    {\n        ncl = ncl - 100;\n        rt = (1 * ncl);\n    }\n    \n    else if (ncl > 199 && ncl < 300)\n\n    {\n        ncl = ncl - 200;\n        rt = (1 * 100) + (2 * ncl);\n    }\n    \n    else if (ncl > 299)\n    \n    {\n        ncl = ncl - 300;\n        rt = (1 * 100) + (2 * 100) + (3* ncl);\n    }\n\n    printf(\"Your bill : $%0.2f\", rt);\n\n    return 0;\n}\n"},{"name":".\n.swp","content":""}]
+#include <stdio.h>
+
+int main()
+{
+    int calls;
+    float bill;
+
+    printf("Enter number of calls :");
+    scanf("%d", &calls);
+
+    if (calls <= 100)
+    {
+        bill = 0;
+    }
+    else if (calls > 99 && calls < 200)
+    {
+        calls = calls - 100;
+        bill = (1 *calls);
+    }
+    else if (calls > 199 && calls < 300)
+    {
+        calls = calls - 200;
+        bill = (1 *100) + (2 *calls);
+    }
+    else if (calls > 299  )
+    {
+        calls = calls - 300;
+        bill = (1 * 100) + (2 * 100) + (3* calls);
+    }
+
+    printf("Your bill is Rs. %0.2f", bill);
+
+    return 0;
+}
